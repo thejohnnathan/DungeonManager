@@ -78,7 +78,7 @@ namespace DungeonManager
         {
             // As per DMG, 30 is the largest ability score a creature can have.
             if (AbilityScore < 1 || AbilityScore > 30)
-                throw new ArgumentOutOfRangeException("Must be 1 through 25");
+                throw new ArgumentOutOfRangeException("Must be 1 through 30");
             return (int)Math.Floor(((double)(AbilityScore - 10)) / 2.0);
         }
 
@@ -144,22 +144,30 @@ namespace DungeonManager
     [Serializable]
     public enum CharacterRace
     { 
-        Dwarf,
-        Elf,
-        Halfling,
-        Human,
+        Aarakocra,
         Dragonborn,
+        Dwarf,
+        Dwarf (Hill),
+        Dward (Mountain),
+        Elf,
+        Elf (High),
+        Elf (Wood),
         Gnome,
-        HalfElf,
-        HalfOrc,
-        Tieling,
-        AirGenasi,
-        EarthGenasi,
-        WaterGenasi,
-        FireGenasi,
-        Arakocra,
-        DeepGnome,
+        Gnome (Deep),
+        Genasi (Air),
+        Genasi (Earth),
+        Genasi (Fire),
+        Genasi (Water),
         Goliath
+        Halfling,
+        Half-Elf,
+        Half-Orc,
+        Human,
+        Shifter,
+        Shifter (Beasthide),
+        Shifter (Longtooth),
+        Shifter (Razorclaw),
+        Tiefling,
     }
 
     [Serializable]
@@ -182,15 +190,15 @@ namespace DungeonManager
     [Serializable]
     public enum CharacterAlignment
     { 
-        LawfulGood,
-        ChaoticGood,
-        NeutralGood,
-        LawfulNeutral,
-        ChaoticNeutral,
-        TrueNeutral,
-        LawfulEvil,
-        ChaoticEvil,
-        NeutralEvil
+        Lawful Good,
+        Chaotic Good,
+        Neutral Good,
+        Lawful Neutral,
+        Chaotic Neutral,
+        True Neutral,
+        Lawful Evil,
+        Chaotic Evil,
+        Neutral Evil
     }
 
     
