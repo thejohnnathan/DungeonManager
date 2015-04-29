@@ -12,7 +12,7 @@ namespace DungeonManager
         {
             // As per DMG, 30 is the largest ability score a creature can have.
             if(AbilityScore < 1 || AbilityScore > 30)
-                throw new ArgumentOutOfRangeException("Must be 1 through 25");
+                throw new ArgumentOutOfRangeException("Must be 1 through 30");
             return (int) Math.Floor(((double)(AbilityScore - 10)) / 2.0);
         }
 
@@ -26,9 +26,9 @@ namespace DungeonManager
                 case "Human": return CharacterRace.Human;
                 case "Dragonborn": return CharacterRace.Dragonborn;
                 case "Gnome": return CharacterRace.Gnome;
-                case "HalfElf": return CharacterRace.HalfElf;
-                case "HalfOrc": return CharacterRace.HalfOrc;
-                case "Tieling": return CharacterRace.Tieling;
+                case "Half-Elf": return CharacterRace.HalfElf;
+                case "Half-Orc": return CharacterRace.HalfOrc;
+                case "Tiefling": return CharacterRace.Tiefling;
                 default: throw new ArgumentOutOfRangeException("Unrecognized Race string");
             }
         }
